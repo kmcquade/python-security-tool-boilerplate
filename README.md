@@ -23,39 +23,15 @@ So I figured out a cool approach that combined the powers of Python, Jinja2, Vue
 * Allows contributors to store their JavaScript in several files in line with standard convention (Vue CLI)
 * **Does not require the user to install webpack or anything else except the Python tool**
 
+## Tutorial
 
-## Vue CLI
+...todo
 
-* Install
+## Using this repository
 
-```bash
-npm install -g @vue/cli @vue/cli-service-global
-```
+...todo
 
-* Ran `vue create vue-boilerplate-ui` in the root of this directory
-* Moved the babel.config.js, package.json, package-lock.json into the root of this directory
-* Moved the public and src into the vue_boilerplate/output/ directory
-
-
-## NPM
-
-### Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
+Note: When the user wants to add more info to the table, they will have to:
+* Include that in the JSON data output from the python before it gets fed into JS
+* Edit the sampleData.js file to show that new file
+* Edit the TableReport.vue component file to show the new field

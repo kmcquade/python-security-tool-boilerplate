@@ -20,12 +20,13 @@
 
     <!-- JQuery-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="application/javascript">
-        var isLocalExample = false;
+    <script>
+        var isLocalExample;
         var report_generated_time;
         var version;
         var report_data;
 
+        isLocalExample = false;
         report_generated_time = "{{ t.report_generated_time }}";
         version = "{{ t.version }}";
 
@@ -33,6 +34,11 @@
         {{ t.results }}
 
     </script>
+</head>
+
+<div id="app"></div>
+
+<body>
     <!--The Vendor bundle gets injected here by Jinja2-->
     <script>
         {{ t.vendor_bundle_js }}
@@ -42,14 +48,6 @@
         {{ t.app_bundle_js }}
     </script>
 
-</head>
-<body>
-<noscript>
-    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
-        Please enable it to continue.</strong>
-</noscript>
-<div id="app"></div>
-<!-- built files will be auto injected -->
 </body>
 
 <!--  Bootstrap-->

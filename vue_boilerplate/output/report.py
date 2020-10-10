@@ -16,8 +16,11 @@ class HTMLReport:
         with open(app_bundle_path, "r") as f:
             self.app_bundle = f.read()
         vendor_bundle_path = get_vendor_bundle_path()
-        with open(vendor_bundle_path, "r") as f:
-            self.vendor_bundle = f.read()
+        if vendor_bundle_path:
+            with open(vendor_bundle_path, "r") as f:
+                self.vendor_bundle = f.read()
+        else:
+            self.vendor_bundle = ""
 
     def get_html_report(self):
         """Returns the rendered HTML report"""
@@ -48,4 +51,7 @@ def get_vendor_bundle_path():
             file_list_with_full_path.append(
                 os.path.abspath(os.path.join(vendor_bundle_directory, file))
             )
-    return file_list_with_full_path[0]
+    if file_list_with_full_path:
+        return file_list_with_full_path[0]
+    else:
+        return None

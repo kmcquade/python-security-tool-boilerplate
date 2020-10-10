@@ -30,7 +30,6 @@
                     :items="report_data"
                     :fields="fields"
                     small
-                    :sort-by.sync="sortBy"
                     :sort-desc.sync="sortDesc"
                     :current-page="currentPage"
                     :per-page="perPage"
@@ -51,7 +50,6 @@
         },
         data() {
             return {
-                sortBy: "first_name",
                 sortDesc: false,
                 totalRows: 1,
                 currentPage: 1,
@@ -60,7 +58,8 @@
                 fields: [
                     {key: 'first_name', sortable: true},
                     {key: 'last_name', sortable: true},
-                    {key: 'city', sortable: true}
+                    {key: 'city', sortable: true},
+                    // TODO: This is where you insert new fields
                 ],
             }
         }

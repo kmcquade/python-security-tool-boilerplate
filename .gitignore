@@ -16,6 +16,7 @@ env/*
 
 # JavaScript
 node_modules
+*.js.map
 
 # Log files
 npm-debug.log*
